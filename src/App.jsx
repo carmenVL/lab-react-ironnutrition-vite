@@ -1,9 +1,13 @@
-import "./App.css";
+import React, { useState } from "react";
+import FoodList from "./components/FoodList";
+import foodsJson from "./foods.json";
 
 function App() {
+  const [foods, setFoods] = useState(foodsJson);
+
   return (
     <div className="App">
-      <h1>LAB | React IronNutrition</h1>
+      <FoodList foods={foods} />
     </div>
   );
 }
